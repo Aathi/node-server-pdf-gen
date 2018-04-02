@@ -1181,7 +1181,10 @@ app.get("/pdf/:name", function(req, res) {
 });
 
 app.get("/pdf", (req, res) => {
-  generatePdf(req.query);
+    res.header('Access-Control-Allow-Origin', "*")
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    generatePdf(req.query);
 });
 
 app.listen(8000);
