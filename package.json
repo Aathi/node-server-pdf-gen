@@ -1,0 +1,24 @@
+{
+  "name": "multipurpose-node-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js --open",
+    "start": "PORT=8000 NODE_ENV=production node server",
+    "deploy": "./node_modules/.bin/shipit staging deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "flightplan": "^0.6.17",
+    "shipit-cli": "^4.0.2",
+    "shipit-deploy": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "fs": "^0.0.1-security",
+    "pdfkit": "^0.8.3",
+    "phantom-html-to-pdf": "^0.5.5"
+  }
+}
